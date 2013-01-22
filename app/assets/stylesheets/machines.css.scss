@@ -1,0 +1,86 @@
+// Place all the styles related to the machines controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+p {
+	margin: 0px;
+	padding: 0px;
+}
+
+fieldset {
+	border: none;
+}
+
+#new_picture {
+  clear: both;
+}
+
+.picture {
+	border: solid 1px #CCC;
+	padding: 10px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+
+	.name {
+		padding-top: 5px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.actions {
+		font-size: 10px;
+		text-align: center;
+		color: #777;
+	}
+}
+
+.upload {
+	border-top: solid 1px #CCC;
+	width: 400px;
+	padding-top: 10px;
+	margin-top: 10px;
+
+	.progress {
+		margin-top: 8px;
+		border: solid 1px #555;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		.bar {
+		 	height: 10px;
+		 	background: #3EC144;
+		}
+	}
+}
+
+.machine-info, .large-picture {
+	float: left;
+	margin-right: 30px;
+}
+
+.machine-info, .thumbnails {
+	width: 490px;
+	margin-bottom: 50px;
+	p {
+		font-size: 120%;
+		font-weight: bold;
+		line-height: 2em;
+	}
+	label {
+		width: 130px;
+		display: block;
+		float:left;
+		text-align: right;
+		padding: 8px 10px;
+	}
+	fieldset {
+		padding: 25px 0px 12px;
+	}
+}
+
+.auth, .lang {
+	float: right;
+}
+
+.auth {
+	margin-right: 20px;
+}

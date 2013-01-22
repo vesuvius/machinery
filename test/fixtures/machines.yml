@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id_number: MyString
+  workshop_id: 1
+  kind_id: 1
+  name: MyString
+  initial_id: MyString
+  make: MyString
+  country_id: 1
+  price: 1.5
+
+two:
+  id_number: MyString
+  workshop_id: 1
+  kind_id: 1
+  name: MyString
+  initial_id: MyString
+  make: MyString
+  country_id: 1
+  price: 1.5

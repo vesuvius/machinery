@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Machinery</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="container">
+			<% flash.each do |name, msg| %>
+				<%= content_tag :div, msg, id: "flash_#{name}" %>
+			<% end %>
+			<div class='lang'>
+				<%= link_to_unless I18n.locale == :en, "EN", locale: :en %> |
+		        <%= link_to_unless I18n.locale == :bg, "BG", locale: :bg %>
+			</div>
+			<div class='auth'>
+				<%= link_to (t 'login'), authenticate_path unless logged_in? or controller.controller_name == 'authenticate' %>
+				<%= link_to (t 'logout'), logout_path if logged_in? %>
+			</div>
+			<%= yield %>
+		</div>
+	</body>
+</html>

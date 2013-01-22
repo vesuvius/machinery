@@ -1,0 +1,14 @@
+<h2><%= t '.title' %></h2>
+<table id="machines" class="display" data-source="<%= machines_url(format: 'json') %>">
+	<thead>
+		<tr>
+			<% for attribute in @header do %>
+				<th><%= Machine.human_attribute_name(attribute) %></th>
+			<% end %>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+<br />
+<%= link_to (t '.new_item'), new_machine_path if logged_in? %>

@@ -1,0 +1,42 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+    login: 'Login'
+    logout: 'Logout'
+    submit: 'Submit'
+    back: 'Back'
+    edit: 'Edit'
+    add_pictures: 'Add Pictures'
+    login_incorrect: 'Login incorrect.'
+    login_correct: 'Login successful.'
+    unauthorized_access: 'Unauthorized Access.'
+    admin_required: 'Administrator permissions required.'
+    authorization_required: 'Authorization required.'
+    email: 'Email'
+    password: 'Password'
+    remove_link: 'Remove'
+    are_you_sure: 'Are you sure?'
+    picture_removed: 'Picture was successfuly removed.'
+    price: 'Price'
+        
+    machines:
+        index:
+            title: 'Machines List'
+            new_item: 'Add new'
+        new:
+            title: 'Machine Data'
+            
+    activerecord:
+        attributes:
+            machine:
+                id_number: 'Inv. #ID'
+                stock_number: 'Stock #ID'
+                workshop_id: 'Workshop'
+                kind_id: 'Type'
+                name: 'Name'
+                initial_id: 'Serial #ID'
+                make: 'Model'
+                country_id: 'Origin'
+                year_of_production: 'YOM'
+                price: 'Price, EUR'

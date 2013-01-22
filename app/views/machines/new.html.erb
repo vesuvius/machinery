@@ -1,0 +1,51 @@
+<h2><%= t '.title' %></h2>
+
+<%= form_for @machine, html: { multipart: true } do |f| %>
+
+	<p>
+		<%= f.label :id_number, Machine.human_attribute_name(:id_number) %><br />
+		<%= f.text_field :id_number %>
+	</p>
+	<p>
+		<%= f.label :stock_number, Machine.human_attribute_name(:stock_number) %><br />
+		<%= f.text_field :stock_number %>
+	</p>
+	<p>
+		<%= f.label :workshop_id, Machine.human_attribute_name(:workshop_id) %><br />
+		<%= f.text_field :workshop_id %>
+	</p>
+	<p>
+		<%= f.label :kind_id, Machine.human_attribute_name(:kind_id) %><br />
+		<%= f.select :kind_id, options_for_select(@kind_list), prompt: 'Избор' %>
+	</p>
+	<p>
+		<%= f.label :name, Machine.human_attribute_name(:name) %><br />
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :initial_id, Machine.human_attribute_name(:initial_id) %><br />
+		<%= f.text_field :initial_id %>
+	</p>
+	<p>
+		<%= f.label :make, Machine.human_attribute_name(:make) %><br />
+		<%= f.text_field :make %>
+	</p>
+	<p>
+		<%= f.label :country_id, Machine.human_attribute_name(:country_id) %><br />
+		<%= f.select :country_id, options_for_select(@country_list), prompt: 'Избор' %>
+	</p>
+	<p>
+		<%= f.label :year_of_production, Machine.human_attribute_name(:year_of_production) %><br />
+		<%= f.text_field :year_of_production %>
+	</p>
+	<p>
+		<%= f.label :price, Machine.human_attribute_name(:price) %><br />
+		<%= f.text_field :price %>
+	</p>
+	<br />
+	<p>
+		<%= f.submit (t 'submit') %>
+	</p>
+<% end %>
+<br />
+<%= link_to (t 'back'), machines_path %>

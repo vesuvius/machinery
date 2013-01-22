@@ -1,0 +1,61 @@
+<div>
+	<h2><%= @machine.name %></h2>
+	<h3> <%= (t 'price') %>: <%= sprintf('%.2f', @machine.price) %> EUR</h3>
+</div>
+
+<div class='machine-info'>
+	<fieldset>
+		<%= label_tag :id_number, Machine.human_attribute_name(:id_number) %>
+		<p><%= @machine.id_number %></p>
+		<%= label_tag :stock_number, Machine.human_attribute_name(:stock_number) %>
+		<p><%= @machine.stock_number %></p>
+		<%= label_tag :workshop_id, Machine.human_attribute_name(:workshop_id) %>
+		<p><%= @machine.workshop_id %></p>
+		<%= label_tag :kind_id, Machine.human_attribute_name(:kind_id) %>
+		<p><%= @machine.kind_name %></p>
+		<%= label_tag :initial_id, Machine.human_attribute_name(:initial_id) %>
+		<p><%= @machine.initial_id %></p>
+		<%= label_tag :make, Machine.human_attribute_name(:make) %>
+		<p><%= @machine.make %></p>
+		<%= label_tag :country_id, Machine.human_attribute_name(:country_id) %>
+		<p><%= @machine.country_name %></p>
+		<%= label_tag :year_of_production, Machine.human_attribute_name(:year_of_production) %>
+		<p><%= @machine.year_of_production %></p>
+	</fieldset>
+</div>
+
+<div id="large_picture" class='large-picture'>
+	<div id="large_picture_container">
+		<%= render partial: 'large_picture', object: @pictures.first unless @pictures.blank? %>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<div id="pictures" class='thumbnails'>
+	<%= render partial: 'picture', :collection => @pictures unless @pictures.blank? %>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+<%= link_to (t 'edit'), edit_machine_path(@machine) if logged_as_admin? %>
+<%= ' | ' if logged_as_admin? %>
+<%= link_to (t 'back'), machines_path %>
+
+<div class="clear"></div>
+<br />
+
+<% if logged_as_admin? %>
+	<%= form_for Picture.new, url: machine_create_picture_path(@machine) do |f| %>
+		<%= f.label :image, (t 'add_pictures') %>
+		<%= f.file_field :image, multiple: true, name: "picture[image]" %>
+	<% end %>
+
+	<script id="template-upload" type="text/x-tmpl">
+	<div class="upload">
+	  {%=o.name%}
+	  <div class="progress"><div class="bar" style="width: 0%"></div></div>
+	</div>
+	</script>
+<% end %>

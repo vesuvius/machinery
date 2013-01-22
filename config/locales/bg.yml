@@ -1,0 +1,45 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+bg:
+    login: 'Вход'
+    logout: 'Изход'
+    submit: 'Въведи'
+    back: 'Назад'
+    edit: 'Редакция'
+    add_pictures: 'Добави снимки'
+    login_incorrect: 'Грешно име или парола.'
+    login_correct: 'Успешна регистрация.'
+    unauthorized_access: 'Непозволен достъп.'
+    admin_required: 'Непозволено ниво на достъп.'
+    authorization_required: 'Вход в системата'
+    email: 'Email'
+    password: 'Парола'
+    remove_link: 'Изтрий'
+    are_you_sure: 'Сигурен ли сте?'
+    picture_removed: 'Снимката беше изтрита.'
+    price: 'Цена'
+    
+        
+    machines:
+        index:
+            title: 'Списък на машините'
+            new_item: 'Добави машина'
+        new:
+            title: 'Данни за машина'
+        edit:
+            title: 'Промяна на данни'
+
+    activerecord:
+        attributes:
+            machine:
+                id_number: 'Инв. номер'
+                stock_number: 'Стоков номер'
+                workshop_id: 'Цех'
+                kind_id: 'Вид'
+                name: 'Име'
+                initial_id: 'Фабр. номер'
+                make: 'Модел'
+                country_id: 'Държава'
+                year_of_production: 'Година'
+                price: 'Цена, EUR'

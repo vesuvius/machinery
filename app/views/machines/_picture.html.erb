@@ -1,0 +1,6 @@
+<div class="picture">
+	<%= link_to image_tag(picture.image_url(:thumb), size: '130x100'), toggle_picture_path(picture), :remote => true if picture.image? %>
+	<div class="actions">
+		<%= link_to (t 'remove_link'), remove_picture_path(picture), confirm: (t 'are_you_sure') if logged_in? %>
+	</div>
+</div>
